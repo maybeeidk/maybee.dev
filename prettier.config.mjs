@@ -1,7 +1,13 @@
 /** @type {import('prettier').Config} */
 export default {
-  plugins: ["prettier-plugin-astro"],
+  plugins: ["prettier-plugin-svelte", "prettier-plugin-astro"],
   overrides: [
+    {
+      files: "*.svelte",
+      options: {
+        parser: "svelte",
+      },
+    },
     {
       files: "*.astro",
       options: {
